@@ -1,0 +1,22 @@
+<h1>ngIF</h1>
+<p *ngIf="condition; else elseBlock"> TRUE/ Diretivas-estruturais works! -NG IF </p>   
+<ng-template #elseBlock>
+    <p>
+        FALSE/ Diretivas-estruturais works! -NG IF
+        Utilzar para barra de load
+    </p>
+</ng-template>
+<hr>
+<p *ngIf="conditionClick">TRUE</p>
+<p *ngIf="!conditionClick">False</p>
+<button (click)="onClick()">Clicar</button>
+<hr>
+
+
+<h1>ngFor</h1>
+<ul>
+    <li *ngFor="let item of list; let i = index" (click)="mostrarEventList($event)" (click)="onClickEventListDelete(i)">
+        Index do Array =>[ {{ i }} ] - Id {{ item.id }} - Nome: {{ item.nome }} - Idade: {{ item.idade }}
+    </li>
+</ul>
+<button (click)="onClickListPush()">Adicionar item na lista</button>

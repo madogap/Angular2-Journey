@@ -1,0 +1,41 @@
+<h2>{{ interpolation }}</h2>
+<p>{{ nome }} tem {{ idade }}</p>
+{{ idade > 30 }}  {{ maisUm }}
+{{ idade + maisUm}}
+
+<hr>
+<h2>{{ propertyBinding }}</h2>
+<p></p>
+<button [disabled]="checkDisable">Butao</button>
+<p></p>
+<img [src]="imgSrc" [alt]="imgTitle">
+
+<br>
+<br>
+<hr>
+<h2>Event Binding</h2>
+<label for="">Mostrando um alert</label><p></p>
+<button (click)="alertaInfo('Funcao alert declarado parametro value')">Butao</button>
+<br><br>
+<label for=""> Evento com o botao, mostrando no console os PointerEvent</label>
+<br><br>
+<button (click)="alertaInf($event)">Butao</button>
+<br><br>
+
+<div (mousemove)="mouseMoveTeste($event)" style="background: red; width:300px; height: 300px"></div>
+{{ position.x }} - {{ position.y }}
+
+<p></p>
+<hr>
+<h2>Two-way-data-binding</h2>
+<input [(ngModel)]="nome" type="text"> {{ nome }}
+
+<br>
+<p></p>
+
+
+
+
+
+
+
